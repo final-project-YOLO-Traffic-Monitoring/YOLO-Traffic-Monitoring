@@ -71,7 +71,7 @@ pip install -e .
   - Ensure your dataset is accessible. Place the vehicle dataset folder inside the YOLOv8 directory or ensure the path in the training script points correctly to where the dataset resides.
   - Right-click on the "ultralytics" folder in PyCharm, then paste the "vehicle dataset" directory.
 
-1. **Configure Dataset:**
+2. **Configure Dataset:**
 
 In the ultralytics folder, open a new folder named “data” and inside it create a data.yaml file to reflect the correct paths and classes. Use the following content:  
 <br/>train: ../vehicle dataset/train/images
@@ -97,7 +97,7 @@ yolo task=detect mode=train data=data/data.yaml model=yolov8n.pt epochs=2 imgsz=
 Use the trained weights to detect objects in the test images. In the terminal, run:  
 <br/>yolo task=detect mode=predict model=runs/detect/train/weights/best.pt source="vehicle dataset/test/images/" conf=0.25 imgsz=640
 
-1. **Review Results:**
+2. **Review Results:**
     - The results of the detection will be saved in the runs/detect/predict\*/ directory. Review these output files to visually inspect the model's performance.
     - in runs/detect/train\*/ you will be able to see a more quantitative analysis, you can evaluate metrics like precision, recall, and mean Average Precision (mAP) using YOLOv8’s built-in evaluation tools.
     - Adjust parameters like the confidence threshold (--conf) and Intersection Over Union (IoU) threshold (--iou-thres) to fine-tune the balance between precision and recall.
