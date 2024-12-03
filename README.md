@@ -77,10 +77,19 @@ YOLO-Traffic-Monitoring/
 The dataset can be downloaded from [Google Drive](https://drive.google.com/drive/folders/10ZyQEE5SAZgdqdWgBbnXNbo4nRssAtgr).
 
 ## src
+This directory contains the main scripts used in the project.
+
 - `train_yolov8_colab.py`: Script to train YOLOv8 on Google Colab.
-  - Clone the repository, set up the environment, and train the model using your custom dataset.
+  - This script clones the YOLOv8 repository, installs the necessary dependencies, and prepares the environment.
+  - It mounts Google Drive to access your dataset, configures the dataset using a `data.yaml` file, and trains the YOLOv8 model.
+  - After training, the trained model weights (`best.pt`) can be downloaded for use in the application.
 
+- `app.py`: Main application script for running inference on images and videos.
+  - Takes an input image or video and applies the trained YOLOv8 model to classify and label objects.
+  - Outputs labeled images or a labeled video saved in the `results/` directory.
+  - Includes parameters for customizing input and output paths, as well as adjusting detection confidence thresholds.
 
-## Documentation
-- [Setup Guide](docs/setup_guide.md)
-- [User Guide](docs/user_guide.md)
+- `video_classification_app.py`: Script to process and classify video frames using the trained YOLOv8 model.
+  - Converts input videos into frames for frame-by-frame classification.
+  - Processes each frame using the model, labels detected objects, and recombines the frames into a labeled video.
+
