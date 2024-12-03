@@ -21,7 +21,7 @@ To use this project, follow these steps:
   - Refer to the setup guide: `docs/setup_guide_pycharm.md`.
 - **Option 2**: Train the model on Google Colab for faster processing.
   - Refer to the training guide: `docs/colab_training.md`.
-  - Alternatively, use the provided script: `scripts/train_yolov8_colab.py`.
+  - Alternatively, use the provided script: `src/train_yolov8_colab.py`.
 
 ---
 
