@@ -11,7 +11,7 @@ pip install ultralytics streamlit opencv-python
 **Create the Streamlit Application:**
 
 - copy the python files from the drive (app.py, video_classification_app.py) and paste them inside the ultralytics folder
-- extract the train5 folder from the zip file in the drive and put it inside the pycharm project in this path: ultralytics/runs/detect/train5
+- extract the train5 folder from the zip file in the drive- https://drive.google.com/drive/u/3/folders/1UNHuJuslbdJGDmOWxcQkI6_5n27MUU5n and put it inside the pycharm project in this path: ultralytics/runs/detect/train5
 
 In your terminal, navigate to the directory containing ultralytics and run
 
